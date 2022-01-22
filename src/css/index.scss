@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+    height: 100%;
+    user-select: none
+}
+.burger_ittme{
+    display: none
+}
+.inner_ul{
+    display: none;
+}
+.header_1_inner_2{
+    bottom: -120px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .burger_ittme{
+        display: flex;
+        cursor: pointer;
+    }
+    .main_ul_2{
+        display: none;
+    }
+  }
+
+@layer components {
+
+// header_1 section is start
+.header-1{
+    @apply w-full h-3/5 bg-red-600
+    relative flex justify-center items-center;
+}
+.menu{
+    @apply  w-full h-20 absolute top-0
+   ;
+}
+.main_ul_1{
+@apply flex  justify-between  items-center
+pt-1 md:px-20 px-10 mt-5;
+}
+.main_ul_2{
+    @apply flex ;
+
+    li{
+        @apply  m-4 p-2 text-white;   
+    }
+    .sign_in_btn{
+        @apply bg-white p-3 rounded-full px-5 text-black
+        hover:text-white hover:bg-yellow-500;
+    }
+
+}
+
+.inner_ul{
+    @apply flex justify-center items-center  w-full 
+    bg-black text-white mt-5;
+
+    li{
+        @apply  m-5;
+    }
+}
+.header_1_inner_1{
+    @apply  text-center text-white h-auto mt-20;
+}
+.header_1_p_1{
+@apply text-3xl md:text-5xl;
+}
+.header_1_p_2{
+    @apply text-2xl md:text-4xl py-2;
+}
+.header_1_p_3{
+@apply   mt-5 w-2/3 mx-auto;
+}
+.header_1_p_4{
+    @apply  mt-20 mx-auto text-black hover:text-white
+     hover:bg-yellow-500 bg-white p-3 w-1/6 rounded-3xl ;
+}
+
+.header_1_inner_2{
+    @apply container w-3/4 bg-violet-400 absolute h-40
+     rounded-3xl flex justify-center items-center;
+}
+// header_1 section is end
+
+
+}
