@@ -13,9 +13,38 @@ html,body{
     display: none;
 }
 .header_1_inner_2{
-    bottom: -120px;
+    bottom: -60px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-
+.header-1{
+    background-image: url("../img/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.book_n {
+    border: inherit;
+    border-radius: 20px;
+    background-color: #eeeeee;
+    width: 80%;
+    font-size: 16px;
+    height: auto;
+    line-height: normal;
+    padding: 10px 20px;
+     -webkit-appearance: none !important;
+}
+label,input {
+    display: block;
+}
+.header-2{
+    margin-top: 100px;
+}
+.header-5{
+    background-image: url("../img/tes_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 @media screen and (max-width: 900px) {
     .burger_ittme{
@@ -25,13 +54,19 @@ html,body{
     .main_ul_2{
         display: none;
     }
+    .header_1_inner_2{
+        bottom: -250px;
+    }
+    .header-2{
+        margin-top: 260px
+    }
   }
 
 @layer components {
 
 // header_1 section is start
 .header-1{
-    @apply w-full h-3/5 bg-red-600
+    @apply w-full h-3/5 
     relative flex justify-center items-center;
 }
 .menu{
@@ -79,12 +114,186 @@ pt-1 md:px-20 px-10 mt-5;
     @apply  mt-20 mx-auto text-black hover:text-white
      hover:bg-yellow-500 bg-white p-3 w-1/6 rounded-3xl ;
 }
-
 .header_1_inner_2{
-    @apply container w-3/4 bg-violet-400 absolute h-40
-     rounded-3xl flex justify-center items-center;
+    @apply container w-3/4 bg-white absolute h-auto p-5
+     rounded-3xl  grid grid-cols-1 lg:grid-cols-3 ;
+
+     .date_itemss{
+         @apply  mx-auto p-2
+         relative block;
+     }
+     label,input{
+         @apply mx-auto;
+     }
+     p{
+         @apply text-gray-600 font-bold;
+     }
 }
 // header_1 section is end
 
+
+// header_2 section is start
+.header-2{
+    @apply grid grid-cols-1 md:grid-cols-2 gap-3 mx-auto
+    px-10 w-full lg:w-3/5 ;
+
+.header_2_inner_item_1{
+@apply  float-left p-4;
+
+.rr_1{
+    @apply text-3xl;
+}
+.rr_2{
+    @apply text-2xl font-bold text-gray-600;
+}
+.rr_3{
+    @apply text-lg mt-5;
+}
+.rr_4{
+    @apply text-lg bg-black p-3 text-white rounded-2xl m-5 w-40 mt-10;
+}
+}
+.header_2_inner_item_2{
+    @apply p-4 flex justify-center flex-wrap items-center ;
+
+    .rrr_1{
+        @apply text-white mx-auto my-5;  
+      }
+      .rrr_2{
+        @apply text-white mx-auto  m-2;  
+      }
+      .rrr_3{
+        @apply text-white mx-auto m-2 ;  
+      }
+
+}
+}
+// header_2 section is end
+
+
+// header_3 section is start
+.header-3{
+    @apply grid grid-cols-1 md:grid-cols-2 gap-3 mx-auto
+    px-10 w-full lg:w-3/5 ;
+
+.header_3_inner_item_1{
+    @apply float-right;
+}
+.header_3_inner_item_2{
+@apply float-right;
+
+.rrs_1{
+    @apply text-3xl;
+}
+.rrs_2{
+    @apply text-2xl font-bold text-gray-600;
+}
+.rrs_3{
+    @apply text-lg mt-5;
+}
+.rrs_4{
+    @apply text-lg bg-black p-3 text-white rounded-2xl m-5 w-40 mt-10;
+}
+}
+}
+// header_3 section is end 
+
+
+// header-4 section is start
+.header-4{
+    @apply   w-full bg-slate-700 mt-10
+    px-10 py-20;
+}
+.header-4-inner{
+    @apply container mx-auto  p-3 gap-5
+    grid grid-cols-1 md:grid-cols-2  lg:w-2/3;
+}
+.header_4_p_1{
+@apply text-4xl m-3 text-white;
+}
+.header_4_p_2{
+@apply m-3 text-lg text-white;
+}
+.about_img{
+    @apply text-2xl ;
+}
+// header-4 section is end
+
+
+// header-5 section is start
+.header-5{
+@apply  w-full h-4/5 lg:h-3/5
+}
+.header-5-p{
+    @apply text-3xl font-bold text-center mt-20;
+}
+.header-5-inner{
+    @apply  grid grid-cols-1 lg:grid-cols-2  gap-3 w-3/5
+    mx-auto mt-20 p-3 ;
+
+    .header-5-item{
+        @apply text-center  bg-indigo-100 ;
+    }
+}
+.items_top{
+    @apply flex justify-between items-center 
+    m-3 p-1;
+    p{
+        @apply text-xl text-gray-800 font-bold;
+    }
+    i{
+        @apply  text-5xl;
+    }
+}
+.dneden_p{
+    @apply  text-xl text-center p-2 m-3;
+}
+// header-5 section is end 
+
+
+// header-6 section is start
+.header-6-wrapper{
+    @apply w-full bg-gray-700;
+}
+.header-6{
+
+@apply  bg-gray-700 relative grid gap-1 w-full xl:w-2/3 mx-auto
+grid-cols-1 md:grid-cols-2 p-5  mt-10 md:mt-0;
+
+.header-6-item-1{
+@apply   p-5;
+
+.header-6-p-1{
+@apply  text-3xl m-4;
+}
+.header-6-p-2{
+@apply  text-2xl m-4;
+}
+.header-6-p-3{
+@apply text-lg m-10;
+}
+}
+.header-6-item-2{
+    
+
+    input{
+        @apply   w-1/2 h-10 bg-white text-black m-2 rounded-3xl 
+        pl-10 mx-auto;
+    }
+    .first-input{
+        @apply mt-20;
+    }
+    .input_message{
+        @apply h-20;
+    }
+    p{
+        @apply w-1/2 bg-black text-white rounded-xl
+        h-10 mx-auto flex justify-center items-center text-xl mb-5;
+    }
+}
+
+}
+
+// header-6 section is end
 
 }
